@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Prototype In Javascript</title>
+</head>
+<body>
+    <script>
+        function student(name,rollno,garde,section)
+        {
+            this.name=name;
+            this.rollno=rollno;
+            this.grade=garde;
+            this.section=section;
+        }
+        student.prototype.getdetails()
+        {
+            return `name:{$this.name},rollno:{$this.rollno},grade:{$this.grade},section:{$this.section}`;
+        }
+        var student1 = new student("Boney",24,"6th","A");
+        student.getdetails();
+        console.log(student1);
+    </script>
+</body>
+</html>
